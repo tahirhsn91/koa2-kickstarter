@@ -1,5 +1,6 @@
 import Koa from 'koa';
 import debug from 'debug';
+import koaBody from 'koa-body';
 
 import jsonMiddleware from 'koa-json';
 import loggerMiddleware from 'koa-bunyan-logger';
@@ -15,6 +16,7 @@ const app = new Koa();
 const d = debug('kickstarter:root');
 
 // Register middleware
+app.use(koaBody({ multipart: true }));
 app.use(jsonMiddleware());
 app.use(loggerMiddleware());
 app.use(requestMiddleware());

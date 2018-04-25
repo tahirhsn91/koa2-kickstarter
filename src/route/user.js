@@ -8,9 +8,11 @@ const router = new Router({
   prefix: '/user',
 });
 
-router.get('/', Ctrl.get);
+router.get('/:id', Ctrl.get);
+router.get('/', Ctrl.getAll);
 router.post('/', Ctrl.post);
 router.put('/', Ctrl.put);
+router.del('/:id', Ctrl.remove);
 
 const routes = router.routes();
 const allowedMethods = router.allowedMethods({
