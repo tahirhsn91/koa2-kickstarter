@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "tenpearls",
+    "database": "database_development",
+    "host": "localhost",
+    "dialect": "mssql",
+    "operatorsAliases": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "test": {
+    "username": "sa",
+    "password": "tenpearls",
+    "database": "database_test",
+    "host": "localhost",
+    "dialect": "mssql"
+  },
+  "production": {
+    "username": "sa",
+    "password": "tenpearls",
+    "database": "database_production",
+    "host": "localhost",
+    "dialect": "mssql"
+  }
+}
